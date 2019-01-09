@@ -1,0 +1,43 @@
+1.首先安装官方插件vue-class-component，vue-property-decorator，配置webpack。
+2.修改入口文件
+entry: {
+ app: './src/main.ts'
+}
+3.resolve部分：
+extensions: ['.js', '.vue', '.json', '.ts', '.tsx']
+4.配置loader
+{
+ test: /\.tsx?$/,
+ loader: 'ts-loader',
+ exclude: /node_modules/,
+ options: {
+  appendTsSuffixTo: [/\.vue$/],
+ }
+ }
+5.使用 tsc 创建项目需要的 tsconfig.json 文件。 $tsc --init
+6.配置tsconfig.json
+{
+ "include": [
+ "src/**/*"
+ ],
+ "exclude": [
+ "node_modules"
+ ],
+ "compilerOptions": {
+ "allowSyntheticDefaultImports": true,
+ "experimentalDecorators": true,
+ "allowJs": true,
+ "module": "es2015",
+ "target": "es5",
+ "moduleResolution": "node",
+ "experimentalDecorators": true,
+ "isolatedModules": true,
+ "lib": [
+  "dom",
+  "es5",
+  "es2015.promise"
+ ],
+ "sourceMap": true,
+ "pretty": true
+ }
+}

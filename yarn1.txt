@@ -1,0 +1,10 @@
+npmÃüÁî¶ÔÓ¦µÄyarnÃüÁî
+
+npm init ------ ? yarn init
+npm run ? ? ------ ? yarn run?
+npm install ** ------ ? yarn install ?**
+npm install ** ¡ªsave ----- yarn add **
+npm uninstall ** ¡ªsave ------- yarn remove **
+npm install ** ¡ªsave-dev ?------ yarn add ** ¡ªdev
+npm update ** ¡ªsave ?------- ?yarn upgrade **
+npm install ** --global -------- ?yarn global add **
